@@ -9,3 +9,5 @@ data/sabio_2.5.1.32.tsv
 data/missing_ids.txt
 data/case_*
 data/crtI_supp.pdf
+output/
+CarotKcat_raw_data.zip
