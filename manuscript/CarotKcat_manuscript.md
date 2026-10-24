@@ -1,6 +1,6 @@
 # CarotKcat: sequence- and substrate-informed deep learning prediction of enzyme turnover numbers with application to carotenoid biosynthesis
 
-**Manuscript draft — v1 (2026-10-24)**
+**Manuscript draft — v2 (2026-10-24)**
 
 ---
 
@@ -11,6 +11,8 @@
 **Results:** We present CarotKcat, a dual-tower deep learning model that predicts kcat directly from enzyme amino-acid sequence (ESM-2 650M embeddings) and substrate structure (molecular fingerprints). Trained on 17,051 curated records covering 2,164 substrates and ~2,700 enzymes integrated from BRENDA and SABIO-RK, CarotKcat achieves Pearson r = 0.727 / R² = 0.528 under random splitting and Pearson r = 0.440 / R² = 0.189 under a stricter enzyme-group split, outperforming tree-based reimplementations of UniKP- and TurNuP-style baselines on unseen enzymes. In a held-out literature case study of 11 carotenoid-pathway enzymes absent from training, CarotKcat reproduced the pathway-level rate-limiting hierarchy (CrtB > CrtE > CrtI; Spearman ρ = 0.60), matched the measured kcat of yeast GGPP synthase within 1.4-fold, and correctly predicted the substrate preference of β-carotene hydroxylase CrtZ. We additionally provide proteome-scale kcat predictions for 3,725 carotenoid-related enzymes and a zero-installation web interface for experimentalists.
 
 **Availability:** Code, models, data and the web server are freely available at https://github.com/ZihengHQU/CarotKcat
+
+**Keywords:** kcat; enzyme kinetics; deep learning; protein language model; carotenoid biosynthesis; metabolic engineering
 
 ---
 
@@ -38,7 +40,9 @@ For the carotenoid focus set, UniProt was queried for reviewed and unreviewed en
 
 ### 2.3 Model architecture and training
 
-The CarotKcat dual-tower network maps each modality through a separate MLP (sequence: 1280→512→256; substrate: 2048→512→256), concatenates the 256-dimensional embeddings, and predicts log10(kcat) through a fusion head (512→256→64→1). Training used SmoothL1 loss, AdamW (lr 1e-4, weight decay 1e-5), cosine annealing over up to 400 epochs, and early stopping on held-out RMSE. Carotenoid-related training records were oversampled 10× to strengthen performance on the target pathway.
+The CarotKcat dual-tower network (Fig. 1) maps each modality through a separate MLP (sequence: 1280→512→256; substrate: 2048→512→256), concatenates the 256-dimensional embeddings, and predicts log10(kcat) through a fusion head (512→256→64→1). Training used SmoothL1 loss, AdamW (lr 1e-4, weight decay 1e-5), cosine annealing over up to 400 epochs, and early stopping on held-out RMSE. Carotenoid-related training records were oversampled 10× to strengthen performance on the target pathway.
+
+![Figure 1](../results/fig_architecture.png)
 
 Two evaluation protocols were used throughout: (i) **random split** (85/15), matching the DLKcat publication protocol; and (ii) **enzyme-group split**, in which all records of a given enzyme fall entirely in train or test, providing a leak-free estimate of generalisation to unseen enzymes.
 
@@ -58,9 +62,15 @@ A Gradio-based interface (`app.py`) accepts FASTA upload or pasted sequences plu
 
 ### 3.1 Overall performance
 
-Under the random split, the CarotKcat dual-tower network reached Pearson r = 0.649 and R² = 0.412 on the test set (n ≈ 2,558), comparable to the original DLKcat report (R² ≈ 0.44). The ensemble variant reached **r = 0.727, R² = 0.528**. Under the leak-free enzyme-group split (n ≈ 2,813), the network and ensemble both reached **r = 0.44**, establishing the model's realistic extrapolation performance to enzymes not seen during training.
+Under the random split, the CarotKcat dual-tower network reached Pearson r = 0.649 and R² = 0.412 on the test set (n = 2,558), comparable to the original DLKcat report (R² ≈ 0.44). The ensemble variant reached **r = 0.727, R² = 0.528**. Under the leak-free enzyme-group split (n = 2,813), the network and ensemble both reached **r = 0.44**, establishing the model's realistic extrapolation performance to enzymes not seen during training. Predicted versus measured values for the ensemble under the random split are shown in Fig. 2.
+
+![Figure 2](../results/fig_scatter.png)
 
 ### 3.2 Comparison with baseline methods
+
+Table 1 and Fig. 3 summarise the benchmark under both evaluation protocols.
+
+**Table 1.** Benchmark of CarotKcat against reimplemented literature-style baselines and ablations (test-set Pearson r / R²).
 
 | Model | Random split r / R² | Enzyme-group split r / R² |
 |---|---|---|
@@ -73,13 +83,33 @@ Under the random split, the CarotKcat dual-tower network reached Pearson r = 0.6
 
 Tree ensembles were strongest under the random split, where test enzymes often share homologues with training enzymes, but degraded markedly under the enzyme-group split (XGBoost r dropped from 0.735 to 0.366). The dual-tower network was the most robust to unseen enzymes, and the ensemble combined the strengths of both, ranking first or statistically tied-first under both protocols. The substrate tower contributed substantial signal (substrate-only r = 0.34–0.48), confirming that kcat is jointly determined by enzyme and substrate.
 
+![Figure 3](../results/fig_benchmark.png)
+
 ### 3.3 Ablation
 
 Removing the substrate input reduced group-split performance to r = 0.419 (sequence-only), while removing the sequence reduced it to r = 0.338; the full dual-tower model outperformed both, and the 10× oversampling of carotenoid-related records was retained for all reported carotenoid analyses.
 
 ### 3.4 Held-out case study of carotenoid enzymes
 
-We curated 13 literature-reported kinetic measurements covering 11 carotenoid-pathway enzymes, none present in the training set (Supplementary Table S1; Fig. 2).
+We curated 13 literature-reported kinetic measurements covering 11 carotenoid-pathway enzymes, none present in the training set (Table 2; Fig. 4).
+
+**Table 2.** Held-out literature case study. Literature kcat values versus CarotKcat-ensemble predictions for carotenoid-pathway enzymes absent from the training set.
+
+| Enzyme (organism) | UniProt | Substrate | Literature kcat (s⁻¹) | Predicted kcat (s⁻¹) | Assay |
+|---|---|---|---|---|---|
+| CrtB (P. agglomerans) | D5KXJ0 | GGPP | 14.0 | 2.51 | in vitro |
+| CrtB (P. ananatis) | P21683 | GGPP | 6.0 | 1.61 | in vivo |
+| CrtE (P. ananatis) | P21684 | FPP | 0.80 | 0.15 | in vitro |
+| CrtI (P. ananatis) | P21685 | phytoene | 0.10 (lower bound) | 0.75 | in vitro, fitted |
+| CrtI (X. dendrorhous) | A0A0P0KMF9 | phytoene | 0.03 | 1.31 | in vivo |
+| CrtI (R. capsulatus) | P17054 | phytoene | 0.003 | 1.91 | in vitro, fitted |
+| CrtI (M. aurum) | Q9K566 | phytoene | 0.10 (lower bound) | 0.65 | in vitro, fitted |
+| CrtI (B. trispora) | Q67GI0 | phytoene | 0.10 (lower bound) | 0.84 | in vitro, fitted |
+| CrtI (E. agglomerans) | E9LFG2 | phytoene | 0.10 (lower bound) | 0.85 | in vitro, fitted |
+| GGPS1 (human) | O95749 | FPP | 0.204 | 0.37 | in vitro |
+| BTS1 (S. cerevisiae) | Q12051 | FPP | 0.025 | 0.036 | in vitro |
+| CrtZ (P. ananatis) | P21688 | β-carotene | 37.0 | 0.14 | in vitro |
+| CrtZ (P. ananatis) | P21688 | canthaxanthin | 6.0 | 0.052 | in vitro |
 
 - **Pathway-level hierarchy (ρ = 0.60).** CarotKcat correctly reproduced the experimentally established rate-limiting order of the lycopene pathway: CrtB (14 s⁻¹ in vitro; 6 s⁻¹ in vivo) > CrtE (0.8 s⁻¹) > CrtI (0.03–0.1 s⁻¹). This ordering is the key driver of bottleneck analyses in metabolic engineering.
 - **GGPP synthase family (ρ = 0.50).** The kcat of yeast BTS1 was predicted quantitatively (0.036 predicted vs 0.025 s⁻¹ measured); the human (0.204 s⁻¹) and Pantoea CrtE (0.8 s⁻¹) values were ranked correctly.
@@ -87,6 +117,8 @@ We curated 13 literature-reported kinetic measurements covering 11 carotenoid-pa
 - **Quantitative error.** Across all 13 case points, 85% of predictions fell within ±10-fold of the literature value (median fold-error 6.5×). For reference, reported kcat values for the *same* enzyme (P. ananatis CrtI) span >1,000-fold across laboratories (8×10⁻⁵ to 0.25 s⁻¹), indicating that literature dispersion is of the same order as model error for this pathway.
 
 Two honest limitations emerged. First, four of the five CrtI literature values sit at the upper constraint boundary (0.1 s⁻¹) of the original COPASI fit and therefore represent only lower bounds; the model's predictions for these enzymes (0.65–0.85 s⁻¹) are consistent with those bounds, but the slowest desaturase (R. capsulatus CrtI, 0.003 s⁻¹) was not ranked lowest. Second, the phytoene desaturation intermediates phytofluene, ζ-carotene and neurosporene yield *bit-identical* Morgan fingerprints (verified), so the fingerprint-based model cannot distinguish them; per-step substrate series could therefore not be resolved.
+
+![Figure 4](../results/fig_case_study.png)
 
 ### 3.5 Proteome-scale prediction for carotenoid enzymes
 
@@ -136,9 +168,19 @@ GitHub: https://github.com/ZihengHQU/CarotKcat — includes training/evaluation 
 14. Wittig, U. *et al.* SABIO-RK: database for biochemical reaction kinetics. *Nucleic Acids Res.* **40**, D790–D796 (2012).
 15. The UniProt Consortium. UniProt: the universal protein knowledgebase in 2023. *Nucleic Acids Res.* **51**, D523–D531 (2023).
 
+## Figure legends
+
+**Figure 1.** CarotKcat dual-tower architecture. Enzyme sequences are encoded by the frozen ESM-2 (650M) protein language model with mean pooling (1,280 dimensions); substrates are encoded as Morgan fingerprints (radius 2, 2,048 bits). Separate MLP towers project each modality to 256 dimensions; the concatenated representation feeds a fusion MLP predicting log10(kcat). The deployed ensemble averages the network prediction with an XGBoost regressor in log space.
+
+**Figure 2.** Predicted versus measured log10(kcat) for the CarotKcat-ensemble on the held-out random-split test set (n = 2,558; Pearson r = 0.727, R² = 0.528).
+
+**Figure 3.** Benchmark of CarotKcat variants against UniKP- and TurNuP-style baselines and single-modality ablations under random and enzyme-group splits (test-set Pearson r). Tree-based baselines degrade sharply on unseen enzymes, whereas the dual-tower network and ensemble remain robust.
+
+**Figure 4.** Held-out literature case study on carotenoid-pathway enzymes (all absent from training). (A) CrtI phytoene desaturases; (B) pathway-level enzymes; (C) GGPP synthases; (D) CrtZ substrate selectivity. Dashed line: identity.
+
 ## Supplementary material
 
-- **Supplementary Table S1** — Literature case-study enzymes, accessions, measured values and predictions (`results/case_study.tsv`).
-- **Supplementary Table S2** — Benchmark metrics for all models and splits (`results/benchmark_table.csv`).
-- **Figure 1** — Predicted vs measured log10(kcat), test set (`results/fig_scatter.png`).
-- **Figure 2** — Case-study panels A–D (`results/fig_case_study.png`).
+- **Supplementary Table S1** — Full case-study data including per-step CrtI desaturation values, dual-tower and XGBoost component predictions (`results/case_study.tsv`).
+- **Supplementary Table S2** — Benchmark metrics for all models and splits, including RMSE (`results/benchmark_table.csv`, `results/ensemble_table.csv`).
+- **Supplementary Dataset S1** — Curated 17,051-record training set (`data/kcat_clean.tsv` with sequences).
+- **Supplementary Dataset S2** — Proteome-scale predictions for 3,725 carotenoid-related enzymes (`results/predictions_carotenoid_uniprot.tsv`).
