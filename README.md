@@ -1,7 +1,16 @@
-# Kcat-Predictor：酶 kcat / 酶活预测（序列 + 底物双输入，类胡萝卜素酶重点优化）
+# CarotKcat：酶 kcat / 酶活预测（序列 + 底物双输入，类胡萝卜素酶重点优化）
 
 > 输入**酶氨基酸序列 + 底物 SMILES**，预测催化常数 kcat（s⁻¹）。
 > 以**类胡萝卜素（Carotenoid）合成通路酶**为应用重点（crtE/crtB/crtI/crtY/crtZ/crtW 等），底座为覆盖全部 EC 类的通用酶活大数据训练。
+
+## 🖥️ 零门槛网页界面（推荐非计算机用户使用）
+
+```bash
+python app.py
+# 浏览器打开 http://127.0.0.1:7860
+```
+
+页面支持：上传 FASTA 文件 / 直接粘贴序列 + 底物 SMILES → 一键预测 → 表格结果 + CSV 下载 + 底物结构可视化。
 
 ## 模型架构（DLKcat 式双塔）
 

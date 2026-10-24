@@ -7,3 +7,4 @@ scipy
 requests
 biopython
 rdkit
+gradio
