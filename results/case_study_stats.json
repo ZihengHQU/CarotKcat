@@ -1,0 +1,15 @@
+{
+  "spearman_ABC": 0.03689283308884696,
+  "pearson_log10_ABC": 0.12622047667551906,
+  "spearman_A_crtI": -0.7071067811865475,
+  "spearman_B_pathway": 0.6,
+  "spearman_C_ggpps": 0.5,
+  "spearman_E_crtI_steps": -0.2581988897471611,
+  "median_fold_error_ABC": 6.525627374649048,
+  "max_fold_error_ABC": 638.2727225621541,
+  "frac_within_10fold_ABC": 0.8461538461538461,
+  "note_E": "phytofluene/zeta-carotene/neurosporene share identical Morgan-r2-2048 fingerprints (verified) -> model gives identical predictions; limitation of fingerprint substrate encoding",
+  "note_A": "literature kcat of the four I4 CrtI enzymes (0.1 s-1) sits at the upper constraint bound of the COPASI fit in [1], i.e. only a lower bound",
+  "D_crtZ_lit_ratio_bcarotene_vs_canthaxanthin": 6.166666666666667,
+  "D_crtZ_pred_ratio": 2.7625460624694824
+}

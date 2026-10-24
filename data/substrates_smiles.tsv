@@ -1,0 +1,11 @@
+15-cis-phytoene => CC(=CCCC(=CCCC(=CCCC(=CC=CC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)C)C)C)C
+geranylgeranyl diphosphate => CC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C
+farnesyl diphosphate => CC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C
+isopentenyl diphosphate => CC(=C)CCOP(=O)(O)OP(=O)(O)O
+lycopene => CC(=CCCC(=CC=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC=C(C)CCC=C(C)C)C)C)C)C
+beta-carotene => CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2=C(CCCC2(C)C)C)C)C
+canthaxanthin => CC1=C(C(CCC1=O)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2=C(C(=O)CCC2(C)C)C)C)C
+zeaxanthin => CC1=C(C(CC(C1)O)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2=C(CC(CC2(C)C)O)C)C)C
+neurosporene => CC(=CCCC(=CCCC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC=C(C)CCC=C(C)C)C)C)C)C
+phytofluene => CC(=CCCC(=CCCC(=CCCC(=CC=CC=C(C)C=CC=C(C)CCC=C(C)CCC=C(C)C)C)C)C)C
+zeta-carotene => CC(=CCCC(=CCCC(=CC=CC(=CC=CC=C(C)C=CC=C(C)CCC=C(C)CCC=C(C)C)C)C)C)C

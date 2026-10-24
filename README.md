@@ -50,6 +50,24 @@ python app.py
 
 ![scatter](results/fig_scatter.png)
 
+## 文献案例验证（held-out，11 个案例酶均不在训练集中）
+
+从文献挖掘有实测动力学数据的类胡萝卜素通路酶，与模型预测对比（`scripts/09_casestudy.py`）：
+
+| 案例面板 | 内容 | 结果 |
+|---|---|---|
+| B 通路级酶（CrtB/CrtE/CrtI，含体内外值 14/6/0.8/0.1/0.03 s⁻¹） | **Spearman = 0.60**，正确复现 CrtB > CrtE > CrtI 的限速排序 | ✅ |
+| C GGPP 合酶家族（人 0.204 / 酵母 0.025 / Pantoea 0.8 s⁻¹） | Spearman = 0.50；酵母 BTS1 定量吻合（预测 0.036 vs 实测 0.025 s⁻¹） | ✅ |
+| D CrtZ 底物选择性（β-胡萝卜素 vs 角黄素，文献活性比 6.2×） | 预测方向正确（2.8×） | ✅ |
+| A CrtI 同源酶排序 | 未通过：文献值 4 个并列 0.1 s⁻¹（原文拟合上限封顶，仅为下限值），模型对四者预测 0.65–0.85 s⁻¹ 与该下限一致，但最慢的 R. capsulatus CrtI（0.003）方向排反 | ⚠️ |
+| E CrtI 逐步底物系列 | 八氢番茄红素/ζ-胡萝卜素/神经孢子烯的 Morgan 指纹**逐位相同**（已验证），模型无法区分——指纹编码的固有局限 | ⚠️ |
+
+**定量误差**：A+B+C 全部 13 个点中，85% 预测落在文献值 ±10 倍以内，中位倍数误差 6.5×。作为参照，同一酶（PaCrtI）不同实验室报道的 kcat 本身相差 >1000 倍（8×10⁻⁵ ~ 0.25 s⁻¹，Schaub 2012 vs BRENDA），文献测定离散度已与模型误差同量级。
+
+![case](results/fig_case_study.png)
+
+**局限启示**：① 底物编码应升级为 GNN/图 Transformer 以区分高度相似的多烯底物；② 极低 kcat（<0.01 s⁻¹）区域训练数据稀缺，预测向训练分布中值回归。
+
 ## 快速使用
 
 ```bash
@@ -75,6 +93,9 @@ python scripts/03_build_dataset.py           # 序列级聚合（纯序列模型
 python scripts/04_embed.py                   # ESM-2 embedding（GPU，~90s/3000条 @RTX4090）
 python scripts/05_train.py                   # 纯序列基线模型
 python scripts/06_train_dual.py              # 序列+底物双塔主模型（随机+分组两种划分）
+python scripts/07_benchmark.py               # 与 UniKP/TurNuP 式基线对比
+python scripts/08_ensemble.py                # CarotKcat-ensemble（双塔+XGBoost）
+python scripts/09_casestudy.py               # 文献案例验证（图+统计）
 ```
 
 ## 类胡萝卜素通路覆盖与局限
