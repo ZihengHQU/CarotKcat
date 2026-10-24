@@ -6,3 +6,4 @@ scikit-learn
 scipy
 requests
 biopython
+rdkit
