@@ -1,0 +1,8 @@
+torch>=2.4
+fair-esm>=2.0
+pandas
+numpy
+scikit-learn
+scipy
+requests
+biopython

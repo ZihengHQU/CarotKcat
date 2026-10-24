@@ -1,0 +1,9 @@
+models/embeddings_partial.npz
+models/embeddings.npz
+*.pyc
+__pycache__/
+.workbuddy/
+data/dlkcat_tree.json
+data/turnup_tree.json
+data/sabio_2.5.1.32.tsv
+data/missing_ids.txt
