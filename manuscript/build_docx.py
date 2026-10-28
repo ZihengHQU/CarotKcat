@@ -25,15 +25,18 @@ SRC = os.path.join(BASE, "CarotKcat_manuscript.md")
 OUT = os.path.join(BASE, "CarotKcat_manuscript_v2.docx")
 FONT = "Times New Roman"
 
-INLINE_RE = re.compile(r"(\*\*.+?\*\*|\*.+?\*)")
+INLINE_RE = re.compile(r"(`[^`]+`|\*\*.+?\*\*|\*.+?\*)")
 
 
 def add_runs(par, text):
-    """Add runs to a paragraph, honouring **bold** and *italic*."""
+    """Add runs to a paragraph, honouring **bold**, *italic* and `code`."""
     for chunk in INLINE_RE.split(text):
         if not chunk:
             continue
-        if chunk.startswith("**") and chunk.endswith("**"):
+        if chunk.startswith("`") and chunk.endswith("`") and len(chunk) > 2:
+            # inline code: drop the markdown markers, keep the literal text
+            par.add_run(chunk[1:-1])
+        elif chunk.startswith("**") and chunk.endswith("**"):
             r = par.add_run(chunk[2:-2]); r.bold = True
         elif chunk.startswith("*") and chunk.endswith("*") and len(chunk) > 2:
             r = par.add_run(chunk[1:-1]); r.italic = True

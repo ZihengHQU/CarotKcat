@@ -60,6 +60,24 @@ python app.py
 
 ![benchmark](results/fig_benchmark.png)
 
+### 划分稳健性：5 折重复划分（mean ± SD）
+
+单次划分的数值可能是运气，因此把整套无泄漏流程在 **5 个独立划分**上各重跑一遍（共 10 次完整重训，`scripts/18_repeated_splits.py`，约 62 分钟 / RTX 4090）。
+
+| 模型 | 随机划分 Pearson（mean ± SD） | 分组划分 Pearson（mean ± SD） |
+|---|---|---|
+| CarotKcat-ensemble | 0.726 ± 0.016 | **0.463 ± 0.048** |
+| UniKP 式（ExtraTrees） | 0.735 ± 0.021 | 0.434 ± 0.035 |
+| TurNuP 式（XGBoost） | **0.744 ± 0.019** | 0.421 ± 0.036 |
+| CarotKcat 双塔（指纹） | 0.634 ± 0.014 | 0.415 ± 0.061 |
+
+- **随机划分**：XGBoost 在 **5/5 折**都最好，集成稳定低 0.018（小但系统）→ 该协议下不主张优势；
+- **分组划分**：集成在 **4/5 折**最好，对 XGBoost 5/5 折胜（Δr = +0.042，配对 t 检验 p = 0.024；Wilcoxon p = 0.062，n=5 受限）；对 ExtraTrees 的 +0.029 在 5 折下无法分辨（p = 0.31）→ 仍表述为**持平**；
+- 单次划分（seed 42）的集成分组 r = 0.420，**低于** 5 折均值 0.463 → 主表数字是偏保守而非"挑好看的"；
+- 折间 SD：随机 0.014–0.021，分组 0.035–0.061 → 分组 r 上 <0.03 的差异不应过度解读。
+
+明细：`results/repeated_splits.csv`、`results/repeated_splits_summary.csv`。
+
 ## 外部验证（独立数据，未参与训练/调参）
 
 | 数据集 | 说明 | 结果 |
@@ -140,6 +158,7 @@ python scripts/14_mutant_sensitivity.py      # 突变体敏感性分析（需本
 python scripts/15_external_benchmark.py      # ADK / KcatTIE 外部验证
 python scripts/16_external_figure.py         # 外部验证组合图
 python scripts/17_gnn_ci.py                  # GNN 变体 CI 与配对检验并入主表
+python scripts/18_repeated_splits.py         # 5 折重复划分稳健性（mean ± SD，~62 min）
 ```
 
 ## 类胡萝卜素通路覆盖与局限

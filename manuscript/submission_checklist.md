@@ -33,8 +33,8 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 - [x] GNN substrate variant; polyene discrimination resolved (3/5 → 5/5 distinct values)
 - [x] Temporal holdout (KcatTIE) and cross-family variant set (ADK)
 - [x] Mutation sensitivity analysis
+- [x] 5-fold repeated splits, random and group, reported as mean ± SD (`results/repeated_splits_summary.csv`; scripts/18, 62 min)
 - [!] No wet-lab validation (by design; stated in the manuscript)
-- [ ] Optionally: 5-fold repeated random splits to report mean ± SD (not yet run)
 
 ## Journal-specific
 - [ ] Choose target journal (candidates: Briefings in Bioinformatics; Bioinformatics; Synthetic and Systems Biotechnology; BMC Bioinformatics)
