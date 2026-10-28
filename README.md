@@ -43,10 +43,13 @@ python app.py
 | CarotKcat 双塔神经网络 | 0.649 / 0.412 | 0.439 / 0.163 |
 | UniKP 式（ESM+指纹, ExtraTrees） | 0.725 / 0.518 | 0.406 / 0.165 |
 | TurNuP 式（ESM+指纹, XGBoost） | **0.735 / 0.538** | 0.366 / 0.121 |
+| DLKcat 式（底物 GNN + 蛋白 n-gram CNN，同划分复现） | 0.466 / 0.208 | 0.356 / 0.108 |
 | 仅序列（ESM+MLP） | 0.637 / 0.401 | 0.419 / 0.171 |
 | 仅底物指纹（MLP） | 0.477 / 0.216 | 0.338 / 0.094 |
 
-关键发现：**树模型在随机划分下最强，但面对未见过的酶（分组划分）时 CarotKcat 双塔/集成明显更优**——深度双塔对全新酶的外推能力更强，集成版在两种协议下都保持最佳或近最佳。
+> DLKcat 原论文（Li et al., *Nat. Catal.* 2022）在其自身 10% 随机留出集上报告 Pearson r = 0.71、RMSE = 1.06（同一 BRENDA+SABIO-RK 语料）。该权重未以可直接执行的形式公开，且划分不同，故仅作参考，不作同口径头对头。上表的 "DLKcat 式" 行是我们按同一架构（GNN+CNN）在同一数据与划分上从零训练的复现结果（`scripts/11_dlkcat_headtohead.py`），用于隔离"预训练表征 vs 架构"的贡献。
+
+关键发现：**树模型在随机划分下最强，但面对未见过的酶（分组划分）时 CarotKcat 双塔/集成明显更优**——深度双塔对全新酶的外推能力更强，集成版在两种协议下都保持最佳或近最佳。同划分复现的 DLKcat 式 GNN+CNN 仅到 r≈0.47，说明在 ~1.3 万条训练记录下，**预训练蛋白表征（ESM-2）比架构本身更决定精度**。
 
 ![scatter](results/fig_scatter.png)
 
@@ -96,6 +99,8 @@ python scripts/06_train_dual.py              # 序列+底物双塔主模型（�
 python scripts/07_benchmark.py               # 与 UniKP/TurNuP 式基线对比
 python scripts/08_ensemble.py                # CarotKcat-ensemble（双塔+XGBoost）
 python scripts/09_casestudy.py               # 文献案例验证（图+统计）
+python scripts/10_paper_figures.py           # 论文图（架构图 + 基准对比图）
+python scripts/11_dlkcat_headtohead.py       # DLKcat 式 GNN+CNN 同划分头对头复现
 ```
 
 ## 类胡萝卜素通路覆盖与局限

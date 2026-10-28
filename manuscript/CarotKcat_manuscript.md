@@ -8,7 +8,7 @@
 
 **Motivation:** Turnover number (kcat) is the key kinetic parameter for enzyme-constrained metabolic modelling and pathway engineering, yet experimental measurements cover only a small fraction of enzymes. This gap is especially acute for secondary-metabolism pathways such as carotenoid biosynthesis, whose core enzymes (CrtE/B/I/Y/Z/W) are among the least kinetically characterised despite their industrial importance for lycopene, β-carotene and astaxanthin production.
 
-**Results:** We present CarotKcat, a dual-tower deep learning model that predicts kcat directly from enzyme amino-acid sequence (ESM-2 650M embeddings) and substrate structure (molecular fingerprints). Trained on 17,051 curated records covering 2,164 substrates and ~2,700 enzymes integrated from BRENDA and SABIO-RK, CarotKcat achieves Pearson r = 0.727 / R² = 0.528 under random splitting and Pearson r = 0.440 / R² = 0.189 under a stricter enzyme-group split, outperforming tree-based reimplementations of UniKP- and TurNuP-style baselines on unseen enzymes. In a held-out literature case study of 11 carotenoid-pathway enzymes absent from training, CarotKcat reproduced the pathway-level rate-limiting hierarchy (CrtB > CrtE > CrtI; Spearman ρ = 0.60), matched the measured kcat of yeast GGPP synthase within 1.4-fold, and correctly predicted the substrate preference of β-carotene hydroxylase CrtZ. We additionally provide proteome-scale kcat predictions for 3,725 carotenoid-related enzymes and a zero-installation web interface for experimentalists.
+**Results:** We present CarotKcat, a dual-tower deep learning model that predicts kcat directly from enzyme amino-acid sequence (ESM-2 650M embeddings) and substrate structure (molecular fingerprints). Trained on 17,051 curated records covering 2,164 substrates and ~2,700 enzymes integrated from BRENDA and SABIO-RK, CarotKcat achieves Pearson r = 0.727 / R² = 0.528 under random splitting and Pearson r = 0.440 / R² = 0.189 under a stricter enzyme-group split, outperforming tree-based reimplementations of UniKP- and TurNuP-style baselines, as well as a from-scratch reimplementation of the DLKcat GNN+CNN architecture, on unseen enzymes. In a held-out literature case study of 11 carotenoid-pathway enzymes absent from training, CarotKcat reproduced the pathway-level rate-limiting hierarchy (CrtB > CrtE > CrtI; Spearman ρ = 0.60), matched the measured kcat of yeast GGPP synthase within 1.4-fold, and correctly predicted the substrate preference of β-carotene hydroxylase CrtZ. We additionally provide proteome-scale kcat predictions for 3,725 carotenoid-related enzymes and a zero-installation web interface for experimentalists.
 
 **Availability:** Code, models, data and the web server are freely available at https://github.com/ZihengHQU/CarotKcat
 
@@ -70,7 +70,7 @@ Under the random split, the CarotKcat dual-tower network reached Pearson r = 0.6
 
 Table 1 and Fig. 3 summarise the benchmark under both evaluation protocols.
 
-**Table 1.** Benchmark of CarotKcat against reimplemented literature-style baselines and ablations (test-set Pearson r / R²).
+**Table 1.** Benchmark of CarotKcat against reimplemented literature-style baselines, a from-scratch DLKcat-architecture reimplementation, and single-modality ablations (test-set Pearson r / R²).
 
 | Model | Random split r / R² | Enzyme-group split r / R² |
 |---|---|---|
@@ -78,10 +78,16 @@ Table 1 and Fig. 3 summarise the benchmark under both evaluation protocols.
 | CarotKcat dual-tower NN | 0.649 / 0.412 | 0.439 / 0.163 |
 | UniKP-style (ExtraTrees) | 0.725 / 0.518 | 0.406 / 0.165 |
 | TurNuP-style (XGBoost) | 0.735 / 0.538 | 0.366 / 0.121 |
+| DLKcat-style (GNN+CNN, reimplemented) | 0.466 / 0.208 | 0.356 / 0.108 |
 | Sequence only (ESM + MLP) | 0.637 / 0.401 | 0.419 / 0.171 |
 | Substrate only (fingerprint MLP) | 0.477 / 0.216 | 0.338 / 0.094 |
+| DLKcat original (published)† | 0.71 / ~0.44 | n.r. |
+
+† Li et al. (2022) reported Pearson r = 0.71 and RMSE = 1.06 on their 10% held-out split of the same BRENDA + SABIO-RK corpus; R² is not stated in the original paper and ≈0.44 is the value cited in later work. The original trained weights are not distributed in a directly executable form and the split differs, so these values are a reference point rather than a like-for-like head-to-head. n.r., not reported in an equivalent form.
 
 Tree ensembles were strongest under the random split, where test enzymes often share homologues with training enzymes, but degraded markedly under the enzyme-group split (XGBoost r dropped from 0.735 to 0.366). The dual-tower network was the most robust to unseen enzymes, and the ensemble combined the strengths of both, ranking first or statistically tied-first under both protocols. The substrate tower contributed substantial signal (substrate-only r = 0.34–0.48), confirming that kcat is jointly determined by enzyme and substrate.
+
+To place CarotKcat within the DLKcat architectural family rather than only against feature-based baselines, we reimplemented the DLKcat encoder — a molecular-graph GNN for the substrate branch and an amino-acid n-gram CNN for the protein branch — and trained it on exactly the same records, splits and seeds. This from-scratch reimplementation reached r = 0.466 (random) and 0.356 (group), well below CarotKcat. The gap is diagnostic rather than incidental: with ~13,000 training records, a sequence CNN trained from scratch cannot learn a protein representation as informative as a pretrained ESM-2 encoder, which is precisely the design choice underlying CarotKcat. We stress that this is a reimplementation, not a run of the authors' released model; the original DLKcat reported r = 0.71 on its own split, and we therefore report that number as a reference (Table 1, †) instead of treating the two as directly comparable. Under the leak-free enzyme-group protocol — which the original DLKcat study did not report in an equivalent form — CarotKcat retains r = 0.44, providing the more conservative and, for enzyme-discovery use, more relevant estimate.
 
 ![Figure 3](../results/fig_benchmark.png)
 
@@ -130,9 +136,9 @@ The CarotKcat web interface requires only a browser: users upload a FASTA file o
 
 ## 4. Discussion
 
-CarotKcat delivers DLKcat-class accuracy with a lightweight, fully reproducible pipeline and, to our knowledge, the first kcat model explicitly optimised and evaluated for the carotenoid biosynthetic pathway. Three findings deserve emphasis.
+CarotKcat delivers accuracy on par with DLKcat's reported performance on the same BRENDA + SABIO-RK corpus (r = 0.727 versus 0.71 under random splitting), while adding a leak-free unseen-enzyme evaluation, a carotenoid-focused case study, and a lightweight, fully reproducible pipeline. To our knowledge it is the first kcat model explicitly optimised and evaluated for the carotenoid biosynthetic pathway. Three findings deserve emphasis.
 
-First, the evaluation protocol matters. Tree-based models on frozen embeddings (UniKP/TurNuP-style) excel when test enzymes resemble training enzymes but lose up to half of their correlation under an enzyme-group split, whereas the dual-tower network's advantage appears precisely in the realistic unseen-enzyme regime — a consideration directly relevant to enzyme discovery campaigns.
+First, the evaluation protocol matters. Tree-based models on frozen embeddings (UniKP/TurNuP-style) excel when test enzymes resemble training enzymes but lose up to half of their correlation under an enzyme-group split, whereas the dual-tower network's advantage appears precisely in the realistic unseen-enzyme regime — a consideration directly relevant to enzyme discovery campaigns. Consistently, a from-scratch DLKcat-style GNN+CNN reimplementation plateaued at r = 0.47 under the same split, indicating that at this data scale (~13,000 training records) pretrained protein representations, rather than architecture family alone, are the dominant driver of accuracy.
 
 Second, the case study shows that for kinetically uncharted secondary-metabolism pathways, model predictions and literature measurements carry comparable uncertainty: reported kcat values for individual carotenoid enzymes vary over three orders of magnitude between laboratories and assay formats. Computational predictions can therefore serve as useful priors for enzyme-constrained modelling even where they cannot replace measurement.
 
@@ -174,7 +180,7 @@ GitHub: https://github.com/ZihengHQU/CarotKcat — includes training/evaluation 
 
 **Figure 2.** Predicted versus measured log10(kcat) for the CarotKcat-ensemble on the held-out random-split test set (n = 2,558; Pearson r = 0.727, R² = 0.528).
 
-**Figure 3.** Benchmark of CarotKcat variants against UniKP- and TurNuP-style baselines and single-modality ablations under random and enzyme-group splits (test-set Pearson r). Tree-based baselines degrade sharply on unseen enzymes, whereas the dual-tower network and ensemble remain robust.
+**Figure 3.** Benchmark of CarotKcat variants against UniKP- and TurNuP-style baselines, a from-scratch reimplementation of the DLKcat GNN+CNN architecture, and single-modality ablations under random and enzyme-group splits (test-set Pearson r). Tree-based baselines degrade sharply on unseen enzymes, whereas the dual-tower network and ensemble remain robust.
 
 **Figure 4.** Held-out literature case study on carotenoid-pathway enzymes (all absent from training). (A) CrtI phytoene desaturases; (B) pathway-level enzymes; (C) GGPP synthases; (D) CrtZ substrate selectivity. Dashed line: identity.
 

@@ -2,6 +2,16 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 title CarotKcat Web UI
+
+REM 防止系统代理拦截 Gradio 启动自检（127.0.0.1 不应走代理，否则报 502）
+set NO_PROXY=127.0.0.1,localhost,::1
+set no_proxy=127.0.0.1,localhost,::1
+set HTTP_PROXY=
+set HTTPS_PROXY=
+set http_proxy=
+set https_proxy=
+set ALL_PROXY=
+set all_proxy=
 echo ============================================
 echo   CarotKcat 预测服务启动中
 echo.

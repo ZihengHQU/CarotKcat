@@ -2,6 +2,17 @@
 """CarotKcat Web UI — 给不熟悉命令行的用户用的可视化预测页面。
 启动: python app.py   然后浏览器打开 http://127.0.0.1:7860
 """
+import os
+# 修复企业代理(HTTP_PROXY/HTTPS_PROXY)导致 Gradio 启动自检 502 的问题：
+# Gradio 启动后会用内置 HTTP 客户端访问 http://127.0.0.1:7860 做健康检查，
+# 若系统设置了代理，该请求会被代理拦截并返回 502，造成启动失败。
+# 这里强制让 localhost 不走代理，并清掉代理环境变量。
+for _k in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy",
+           "ALL_PROXY", "all_proxy", "FTP_PROXY", "ftp_proxy"):
+    os.environ.pop(_k, None)
+os.environ["NO_PROXY"] = "127.0.0.1,localhost,::1"
+os.environ["no_proxy"] = "127.0.0.1,localhost,::1"
+
 import re, tempfile
 import numpy as np, pandas as pd, torch, torch.nn as nn, gradio as gr, esm
 from rdkit import Chem

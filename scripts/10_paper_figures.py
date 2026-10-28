@@ -60,24 +60,26 @@ print("saved results/fig_architecture.png")
 # ---------------- Figure 2: benchmark ----------------
 df = pd.read_csv("results/benchmark_table.csv")
 order = ["CarotKcat-ensemble", "CarotKcat (dual-tower)",
-         "UniKP-style (ESM+FP, ExtraTrees)", "TurNuP-style (ESM+FP, XGBoost)",
+         "DLKcat-style (GNN+CNN, reimplemented)",
+         "TurNuP-style (ESM+FP, XGBoost)", "UniKP-style (ESM+FP, ExtraTrees)",
          "ESM only (MLP)", "Substrate-FP only (MLP)"]
-labels = ["CarotKcat\nensemble", "CarotKcat\ndual-tower", "UniKP-style\n(ExtraTrees)",
-          "TurNuP-style\n(XGBoost)", "Sequence\nonly", "Substrate\nonly"]
+labels = ["CarotKcat\nensemble", "CarotKcat\ndual-tower", "DLKcat-style\n(GNN+CNN)",
+          "TurNuP-style\n(XGBoost)", "UniKP-style\n(ExtraTrees)",
+          "Sequence\nonly", "Substrate\nonly"]
 r_vals, g_vals = [], []
 for m in order:
     r_vals.append(df[(df.model == m) & (df.protocol == "random")]["Pearson"].iloc[0])
     g_vals.append(df[(df.model == m) & (df.protocol == "group")]["Pearson"].iloc[0])
 
-fig, ax = plt.subplots(figsize=(6.6, 3.6), dpi=300)
-x = range(len(order)); w = 0.36
+fig, ax = plt.subplots(figsize=(7.6, 3.7), dpi=300)
+x = range(len(order)); w = 0.38
 b1 = ax.bar([i - w/2 for i in x], r_vals, w, label="Random split", color="#93c5fd", ec="#1e40af", lw=0.7)
 b2 = ax.bar([i + w/2 for i in x], g_vals, w, label="Enzyme-group split", color="#fca5a5", ec="#991b1b", lw=0.7)
 for bars in (b1, b2):
     for b in bars:
         ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.012,
-                f"{b.get_height():.2f}", ha="center", fontsize=7)
-ax.set_xticks(list(x)); ax.set_xticklabels(labels, fontsize=8)
+                f"{b.get_height():.2f}", ha="center", fontsize=6.5)
+ax.set_xticks(list(x)); ax.set_xticklabels(labels, fontsize=6.8)
 ax.set_ylabel("Pearson r (test set)")
 ax.set_ylim(0, 0.85)
 ax.legend(frameon=False, fontsize=8)
