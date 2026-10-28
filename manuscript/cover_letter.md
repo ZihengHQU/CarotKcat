@@ -1,0 +1,33 @@
+# Cover letter (draft)
+
+**To the Editor,**
+
+We submit for your consideration the manuscript **"CarotKcat: a sequence- and substrate-aware deep learning model for kcat prediction in carotenoid biosynthesis"**.
+
+**What the paper reports.** CarotKcat is a dual-tower model that predicts enzyme turnover numbers (kcat) from an amino-acid sequence and a substrate SMILES. It is trained on 17,051 curated records derived from the BRENDA + SABIO-RK corpus and is evaluated with an explicit enzyme-group (leak-free) split rather than only the usual random split. On the same test instances it reaches r = 0.723 (95% CI 0.698–0.746) under random splitting and r = 0.420 (0.388–0.452) on enzymes without training-set homologues. We also provide a held-out literature case study on 11 carotenoid-pathway enzymes, a molecular-graph variant that resolves polyene substrates with identical fingerprints, proteome-scale predictions for 3,725 carotenoid-related sequences, and a zero-installation web interface.
+
+**Why we believe it is suitable for [JOURNAL].** Most kcat models are benchmarked only under random splits, where homologous enzymes leak between training and test sets. Our contribution is as much methodological as predictive: we report a leak-free estimate, 95% bootstrap confidence intervals, paired bootstrap tests against every baseline, and two external benchmarks. We also report *negative* results that are usually omitted — the model fails on an exceptionally fast enzyme family (ADK orthologs, r = 0.05) and is insensitive to single point mutations (<2-fold predicted change). We think this makes the paper useful both as a tool and as a candid assessment of what current kcat models can and cannot do.
+
+**Novelty relative to DLKcat.** We reimplemented the DLKcat GNN+CNN architecture and trained it on exactly our data and splits; it reaches r = 0.47, below CarotKcat (0.72). The comparison isolates the contribution of pretrained protein representations from architecture, and is reported with the caveat that the original DLKcat weights are not distributed in a directly runnable form.
+
+**Availability.** All code, trained weights, curated data, predictions and the web server are openly available at https://github.com/ZihengHQU/CarotKcat.
+
+**Declarations.** The manuscript is original, has not been published elsewhere and is not under consideration by another journal. All authors have approved the submission and declare no competing interests. No wet-lab experiments were performed; all analyses are computational.
+
+We hope the manuscript is suitable for review and look forward to your response.
+
+Sincerely,
+
+**[CORRESPONDING AUTHOR NAME]**
+[Affiliation]
+[Email]
+[ORCID]
+on behalf of all authors
+
+---
+
+*Suggested reviewers (optional — fill in names and affiliations; do not list anyone with a conflict of interest):*
+
+1. [Name, Affiliation, Email]
+2. [Name, Affiliation, Email]
+3. [Name, Affiliation, Email]

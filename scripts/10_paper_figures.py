@@ -5,6 +5,7 @@ Fig 2: benchmark comparison (grouped bars, random vs enzyme-group split).
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 import pandas as pd
 
@@ -60,28 +61,37 @@ print("saved results/fig_architecture.png")
 # ---------------- Figure 2: benchmark ----------------
 df = pd.read_csv("results/benchmark_table.csv")
 order = ["CarotKcat-ensemble", "CarotKcat (dual-tower)",
+         "CarotKcat-GNN (ESM+GNN substrate)",
          "DLKcat-style (GNN+CNN, reimplemented)",
          "TurNuP-style (ESM+FP, XGBoost)", "UniKP-style (ESM+FP, ExtraTrees)",
          "ESM only (MLP)", "Substrate-FP only (MLP)"]
-labels = ["CarotKcat\nensemble", "CarotKcat\ndual-tower", "DLKcat-style\n(GNN+CNN)",
-          "TurNuP-style\n(XGBoost)", "UniKP-style\n(ExtraTrees)",
-          "Sequence\nonly", "Substrate\nonly"]
-r_vals, g_vals = [], []
+labels = ["CarotKcat\nensemble", "CarotKcat\ndual-tower", "CarotKcat\nGNN",
+          "DLKcat-style\n(GNN+CNN)", "TurNuP-style\n(XGBoost)",
+          "UniKP-style\n(ExtraTrees)", "Sequence\nonly", "Substrate\nonly"]
+r_vals, g_vals, r_err, g_err = [], [], [], []
 for m in order:
-    r_vals.append(df[(df.model == m) & (df.protocol == "random")]["Pearson"].iloc[0])
-    g_vals.append(df[(df.model == m) & (df.protocol == "group")]["Pearson"].iloc[0])
+    for proto, vals, errs in (("random", r_vals, r_err), ("group", g_vals, g_err)):
+        row = df[(df.model == m) & (df.protocol == proto)].iloc[0]
+        vals.append(row["Pearson"])
+        errs.append([row["Pearson"] - row["Pearson_lo"], row["Pearson_hi"] - row["Pearson"]])
 
-fig, ax = plt.subplots(figsize=(7.6, 3.7), dpi=300)
+fig, ax = plt.subplots(figsize=(8.8, 3.8), dpi=300)
 x = range(len(order)); w = 0.38
-b1 = ax.bar([i - w/2 for i in x], r_vals, w, label="Random split", color="#93c5fd", ec="#1e40af", lw=0.7)
-b2 = ax.bar([i + w/2 for i in x], g_vals, w, label="Enzyme-group split", color="#fca5a5", ec="#991b1b", lw=0.7)
+b1 = ax.bar([i - w/2 for i in x], r_vals, w, label="Random split", color="#93c5fd",
+            ec="#1e40af", lw=0.7,
+            yerr=np.array(r_err).T, ecolor="#1e40af", capsize=2.5,
+            error_kw={"lw": 0.8, "capthick": 0.8})
+b2 = ax.bar([i + w/2 for i in x], g_vals, w, label="Enzyme-group split", color="#fca5a5",
+            ec="#991b1b", lw=0.7,
+            yerr=np.array(g_err).T, ecolor="#991b1b", capsize=2.5,
+            error_kw={"lw": 0.8, "capthick": 0.8})
 for bars in (b1, b2):
     for b in bars:
-        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.012,
-                f"{b.get_height():.2f}", ha="center", fontsize=6.5)
+        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.030,
+                f"{b.get_height():.2f}", ha="center", fontsize=6.3)
 ax.set_xticks(list(x)); ax.set_xticklabels(labels, fontsize=6.8)
-ax.set_ylabel("Pearson r (test set)")
-ax.set_ylim(0, 0.85)
+ax.set_ylabel("Pearson r (test set, 95% bootstrap CI)")
+ax.set_ylim(0, 0.86)
 ax.legend(frameon=False, fontsize=8)
 ax.spines[["top", "right"]].set_visible(False)
 fig.tight_layout()

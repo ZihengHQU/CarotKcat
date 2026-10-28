@@ -1,0 +1,6 @@
+substrate,log10kcat_MorganFP,log10kcat_GNN,kcat_MorganFP,kcat_GNN,unique_FP
+15-cis-phytoene,0.016855732,-0.6155426,1.0395747,0.24235803,False
+phytofluene,0.6875717,-0.58684975,4.870479,0.25891086,False
+zeta-carotene,0.6875717,-0.53489465,4.870479,0.2918135,False
+neurosporene,0.6875717,-0.4825832,4.870479,0.3291674,False
+lycopene,0.49216372,-0.42288238,3.10573,0.37767446,False

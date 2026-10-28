@@ -1,0 +1,52 @@
+substrate	mutant_anon	kcat_s-1	fold_vs_WT	NN_XGB_gap_log10	verdict
+15-cis-phytoene	M1	1.9225999	1.0705992	0.12705688	within noise
+15-cis-phytoene	M2	1.8977383	1.0567551	0.12902044	within noise
+15-cis-phytoene	M3	1.802096	1.0034968	0.05049616	within noise
+15-cis-phytoene	M4	1.7825696	0.99262345	0.04445012	within noise
+15-cis-phytoene	M5	1.7818687	0.99223316	0.02286981	within noise
+15-cis-phytoene	M6	1.7781771	0.9901775	0.069986925	within noise
+15-cis-phytoene	M7	1.7666894	0.98378056	0.034026906	within noise
+15-cis-phytoene	M8	1.7660662	0.98343354	0.046158627	within noise
+15-cis-phytoene	M9	1.7560474	0.97785455	0.0751463	within noise
+15-cis-phytoene	M10	1.7192031	0.9573378	0.035538062	within noise
+15-cis-phytoene	M11	1.7081474	0.9511815	0.004489228	within noise
+15-cis-phytoene	M12	1.7078387	0.9510096	0.016303167	within noise
+15-cis-phytoene	M13	1.7010326	0.94721955	0.018488407	within noise
+15-cis-phytoene	M14	1.6997359	0.9464975	0.005096078	within noise
+15-cis-phytoene	M15	1.6892116	0.94063705	0.0037060976	within noise
+15-cis-phytoene	M16	1.6771687	0.933931	0.036497086	within noise
+15-cis-phytoene	M17	1.6244092	0.90455186	0.04161094	within noise
+beta-carotene	M1	4.981391	1.0573417	0.4068895	within noise
+beta-carotene	M2	4.898741	1.0397985	0.4046027	within noise
+beta-carotene	M3	4.731546	1.00431	0.4689383	within noise
+beta-carotene	M4	4.687945	0.99505526	0.49832803	within noise
+beta-carotene	M5	4.6702447	0.9912983	0.47312063	within noise
+beta-carotene	M6	4.6338563	0.9835745	0.48452204	within noise
+beta-carotene	M7	4.627188	0.9821592	0.47710258	within noise
+beta-carotene	M8	4.625047	0.9817048	0.47104406	within noise
+beta-carotene	M9	4.6224976	0.98116356	0.48975843	within noise
+beta-carotene	M10	4.591825	0.97465307	0.47360194	within noise
+beta-carotene	M11	4.515343	0.9584191	0.48417324	within noise
+beta-carotene	M12	4.46268	0.94724095	0.49310344	within noise
+beta-carotene	M13	4.4097548	0.9360071	0.55715644	within noise
+beta-carotene	M14	4.3762927	0.92890453	0.5284462	within noise
+beta-carotene	M15	4.327833	0.9186186	0.5380278	within noise
+beta-carotene	M16	4.306322	0.9140527	0.502733	within noise
+beta-carotene	M17	4.169902	0.8850964	0.581733	within noise
+geranylgeranyl diphosphate	M1	1.9432232	1.07173	0.035978317	within noise
+geranylgeranyl diphosphate	M2	1.918703	1.0582066	0.034290045	within noise
+geranylgeranyl diphosphate	M3	1.8194159	1.0034477	0.11157933	within noise
+geranylgeranyl diphosphate	M4	1.7834948	0.9836363	0.12796384	within noise
+geranylgeranyl diphosphate	M5	1.7803417	0.98189735	0.10225621	within noise
+geranylgeranyl diphosphate	M6	1.7764529	0.9797526	0.08865586	within noise
+geranylgeranyl diphosphate	M7	1.7671753	0.97463584	0.13324928	within noise
+geranylgeranyl diphosphate	M8	1.7657877	0.9738705	0.15448895	within noise
+geranylgeranyl diphosphate	M9	1.7514645	0.965971	0.1318633	within noise
+geranylgeranyl diphosphate	M10	1.7253499	0.9515682	0.14632484	within noise
+geranylgeranyl diphosphate	M11	1.7204194	0.9488489	0.1362628	within noise
+geranylgeranyl diphosphate	M12	1.7183263	0.9476945	0.14406508	within noise
+geranylgeranyl diphosphate	M13	1.7160978	0.94646543	0.1569928	within noise
+geranylgeranyl diphosphate	M14	1.7062836	0.94105273	0.1587959	within noise
+geranylgeranyl diphosphate	M15	1.6937774	0.9341553	0.17340618	within noise
+geranylgeranyl diphosphate	M16	1.6917771	0.93305206	0.19779748	within noise
+geranylgeranyl diphosphate	M17	1.6480001	0.90890807	0.19946128	within noise

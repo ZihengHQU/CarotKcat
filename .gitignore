@@ -11,3 +11,10 @@ data/case_*
 data/crtI_supp.pdf
 output/
 CarotKcat_raw_data.zip
+
+# --- Confidential: unpublished mutant designs (local only, never push) ---
+mutants.fasta
+generate_mutants.py
+results/mutant_sensitivity_*.tsv
+results/fig_mutants_*.png
+results/dlkcat_headtohead_v1_weak.csv
