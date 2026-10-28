@@ -4,7 +4,7 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 
 ## Manuscript
 - [x] Abstract, introduction, methods, results, discussion, conclusion
-- [x] 5 main figures embedded (architecture, scatter, benchmark, case study, external validation + mutation sensitivity)
+- [x] 7 main figures embedded (architecture, scatter, benchmark, case study, external validation + mutation sensitivity, dry validation, zero-shot terpenoid benchmark)
 - [x] 2 main tables (benchmark, case study) + supplementary tables
 - [x] Figure legends and supplementary material list
 - [x] Leak-free re-evaluation; bootstrap CIs; paired bootstrap tests
@@ -20,7 +20,7 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 
 ## Data and code
 - [x] Public GitHub repository with scripts, weights, curated data and results
-- [x] Reproducible pipeline (`scripts/01`–`17`)
+- [x] Reproducible pipeline (`scripts/01`–`23`)
 - [x] Raw-data archive (`CarotKcat_raw_data.zip`)
 - [x] External benchmark data documented (`data/external/`, source: github.com/zelixirSH/kcat_benchmark_2025)
 - [ ] Archive deposited to Zenodo and DOI obtained (recommended for the Data Availability statement)
@@ -35,6 +35,7 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 - [x] Mutation sensitivity analysis
 - [x] 5-fold repeated splits, random and group, reported as mean ± SD (`results/repeated_splits_summary.csv`; scripts/18, 62 min)
 - [x] Dry validation: predicted kcat embedded in enzyme-constrained iML1515, compared with published lycopene productivities (scripts/19–20; Fig. 6)
+- [x] Curated zero-shot terpenoid benchmark, 43 measurements / 35 enzymes with per-record provenance, response-slope analysis (scripts/21–23; Fig. 7; Table S7)
 - [!] No wet-lab validation (by design; stated in the manuscript)
 
 ## Journal-specific
@@ -48,5 +49,5 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 ## Integrity
 - [x] No test-set early stopping; legacy table retained for provenance
 - [x] Exact-sequence leakage check against external sets (1 ADK and 7 KcatTIE matches removed)
-- [x] Negative results reported (ADK failure, mutation insensitivity)
+- [x] Negative results reported (ADK failure, mutation insensitivity, no within-family ranking on unseen terpenoid families)
 - [!] Confidential mutant sequences (`mutants.fasta`, `results/mutant_sensitivity_*.tsv`) are **not** in the public repository; do not upload them unless the sequences are cleared for release

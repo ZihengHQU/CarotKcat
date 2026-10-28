@@ -1,0 +1,237 @@
+ec,kcat,substrate,organism,uniprot,commentary,literature
+2.5.1.10,5.73,dimethylallyl diphosphate,Sundstroemia setigera,-,at pH 7.5% and 30°C,739656
+2.5.1.10,0.2,geranyl diphosphate,Mycobacterium tuberculosis,-,"pH 7.9, 37°C",659667
+2.5.1.10,43.5,geranyl diphosphate,Sundstroemia setigera,-,at pH 7.5% and 30°C,739656
+2.5.1.10,0.49,isopentenyl diphosphate,Mycobacterium tuberculosis,-,"pH 7.9, 37°C",659667
+2.5.1.10,6,isopentenyl diphosphate,Sundstroemia setigera,-,"with dimethylallyl diphosphate as cosubstrate, at pH 7.5% and 30°C",739656
+2.5.1.10,33.5,isopentenyl diphosphate,Sundstroemia setigera,-,"with geranyl diphosphate as cosubstrate, at pH 7.5% and 30°C",739656
+2.2.1.7,0.6,1-methyl-2-nitrosobenzene,Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.018,1-nitrosonaphthalen-2-ol,Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.006,"2-hydroxy-4,6-dinitrobenzaldehyde",Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.023,"3,5-dimethyl-4-nitroso-1-(propan-2-yl)-1H-pyrazole",Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.033,6-bromo-1-nitrosonaphthalen-2-ol,Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.02,6-hydroxy-5-nitrosonaphthalene-2-sulfonamide,Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,0.022,7-methoxy-1-nitrosonaphthalen-2-ol,Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,1.7,D-glyceraldehyde,Rhodobacter capsulatus,-,"pH 7.4, 37°C",657953
+2.2.1.7,0.015,"N,N-dimethyl-4-nitrosoaniline",Escherichia coli,P77488,at pH 8.0 and 37°C,735946
+2.2.1.7,additional information,additional information,Escherichia coli,-,"the most efficient turnover of substrates is observed in HEPES buffer, pH 8.0",719975
+2.2.1.7,0.01,D-glyceraldehyde 3-phosphate,Mycobacterium tuberculosis,P9WNS3,"mutant lacking loop 190-234, pH 8.0, temperature not specified in the publication",779338
+2.2.1.7,0.0173,D-glyceraldehyde 3-phosphate,Mycobacterium tuberculosis,P9WNS3,"wild-type, pH 8.0, temperature not specified in the publication",779338
+2.2.1.7,0.045,D-glyceraldehyde 3-phosphate,Escherichia coli,-,"apparent value, mutant enzyme H299A, at pH 8.0 and 25-28°C",756065
+2.2.1.7,0.05,D-glyceraldehyde 3-phosphate,Escherichia coli,-,"apparent value, mutant enzyme H49N, at pH 8.0 and 25-28°C",756065
+2.2.1.7,0.17,D-glyceraldehyde 3-phosphate,Escherichia coli,-,"apparent value, mutant enzyme H299N, at pH 8.0 and 25-28°C",756065
+2.2.1.7,0.37,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H82A, at pH 8.0 and 37°C",757477
+2.2.1.7,0.37,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H82A, at pH 8.0 and 37°C",756018
+2.2.1.7,0.43,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme N181A, at pH 8.0 and 37°C",756018
+2.2.1.7,0.45,D-glyceraldehyde 3-phosphate,Escherichia coli,-,"apparent value, mutant enzyme H49A, at pH 8.0 and 25-28°C",756065
+2.2.1.7,0.64,D-glyceraldehyde 3-phosphate,Populus trichocarpa,-,at pH 8.0 and 37°C,736415
+2.2.1.7,0.75,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,-,pH and temperature not specified in the publication,757220
+2.2.1.7,0.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H304A, at pH 8.0 and 37°C",757477
+2.2.1.7,0.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H304A, at pH 8.0 and 37°C",756018
+2.2.1.7,1,D-glyceraldehyde 3-phosphate,Escherichia coli,P77488,"pH 8, temperature not specified in the publication",776648
+2.2.1.7,1.1,D-glyceraldehyde 3-phosphate,Pseudomonas aeruginosa,Q9KGU7,"pH 8, temperature not specified in the publication",776648
+2.2.1.7,1.38,D-glyceraldehyde 3-phosphate,Escherichia coli,-,"apparent value, wild type enzyme, at pH 8.0 and 25-28°C",756065
+2.2.1.7,1.7,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme R423A, at pH 8.0 and 37°C",756018
+2.2.1.7,1.9,D-glyceraldehyde 3-phosphate,Rhodobacter capsulatus,-,"pH 7.4, 37°C",657953
+2.2.1.7,2,D-glyceraldehyde 3-phosphate,Botryococcus braunii,"H5ZXI1, H5ZXI0","pH 7.8, 32°C",720765
+2.2.1.7,2.57,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,-,"wild type enzyme, at pH 8.0 and 37°C",736085
+2.2.1.7,3.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme Y395A, at pH 8.0 and 37°C",756018
+2.2.1.7,4.1,D-glyceraldehyde 3-phosphate,Plasmodium falciparum,-,"apparent value, at pH 7.0 and 37°C",737194
+2.2.1.7,5.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme Y395F, at pH 8.0 and 37°C",756018
+2.2.1.7,6,D-glyceraldehyde 3-phosphate,Botryococcus braunii,"H5ZXI1, H5ZXI0","pH 7.8, 32°C",720765
+2.2.1.7,6.4,D-glyceraldehyde 3-phosphate,Plasmodium vivax,-,"apparent value, at pH 7.0 and 37°C",737194
+2.2.1.7,6.4,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme R423K, at pH 8.0 and 37°C",756018
+2.2.1.7,7.7,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme D430A, at pH 8.0 and 37°C",757477
+2.2.1.7,7.7,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme D430A, at pH 8.0 and 37°C",756018
+2.2.1.7,7.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"wild type enzyme, at pH 8.0 and 37°C",757477
+2.2.1.7,7.9,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, wild type enzyme, at pH 8.0 and 37°C",756018
+2.2.1.7,9.6,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H434A, at pH 8.0 and 37°C",757477
+2.2.1.7,9.6,D-glyceraldehyde 3-phosphate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H434A, at pH 8.0 and 37°C",756018
+2.2.1.7,11,D-glyceraldehyde 3-phosphate,Plasmodium vivax,A5K817,pH and temperature not specified in the publication,719510
+2.2.1.7,26.8,D-glyceraldehyde 3-phosphate,Agrobacterium tumefaciens,Q5QKF8,"pH 8.0, 37°C",674982
+2.2.1.7,0.0039,pyruvate,Mycobacterium tuberculosis,P9WNS3,"mutant lacking loop 190-234, pH 8.0, temperature not specified in the publication",779338
+2.2.1.7,0.0045,pyruvate,Mycobacterium tuberculosis,P9WNS3,"wild-type, pH 8.0, temperature not specified in the publication",779338
+2.2.1.7,0.38,pyruvate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H82A, at pH 8.0 and 37°C",757477
+2.2.1.7,0.38,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H82A, at pH 8.0 and 37°C",756018
+2.2.1.7,0.53,pyruvate,Populus trichocarpa,-,at pH 8.0 and 37°C,736415
+2.2.1.7,0.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H304A, at pH 8.0 and 37°C",757477
+2.2.1.7,0.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H304A, at pH 8.0 and 37°C",756018
+2.2.1.7,1.7,pyruvate,Rhodobacter capsulatus,-,"pH 7.4, 37°C, cosubstrate: D-glyceraldehyde",657953
+2.2.1.7,1.9,pyruvate,Rhodobacter capsulatus,-,"pH 7.4, 37°C, cosubstrate: D-glyceraldehyde 3-phosphate",657953
+2.2.1.7,1.9,pyruvate,Botryococcus braunii,"H5ZXI1, H5ZXI0","pH 7.8, 32°C",720765
+2.2.1.7,2.4,pyruvate,Botryococcus braunii,"H5ZXI1, H5ZXI0","pH 7.8, 32°C",720765
+2.2.1.7,2.57,pyruvate,Deinococcus radiodurans,-,"wild type enzyme, at pH 8.0 and 37°C",736085
+2.2.1.7,2.6,pyruvate,Escherichia coli,-,"pH 8.0, 37°C",719975
+2.2.1.7,2.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme Y395F, at pH 8.0 and 37°C",756018
+2.2.1.7,3.3,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme N181A, at pH 8.0 and 37°C",756018
+2.2.1.7,3.6,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme Y395A, at pH 8.0 and 37°C",756018
+2.2.1.7,3.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme R423K, at pH 8.0 and 37°C",756018
+2.2.1.7,4.2,pyruvate,Plasmodium falciparum,-,"apparent value, at pH 7.0 and 37°C",737194
+2.2.1.7,5.6,pyruvate,Botryococcus braunii,"H5ZXI1, H5ZXI0","pH 7.8, 32°C",720765
+2.2.1.7,6.6,pyruvate,Plasmodium vivax,-,"apparent value, at pH 7.0 and 37°C",737194
+2.2.1.7,7.2,pyruvate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme D430A, at pH 8.0 and 37°C",757477
+2.2.1.7,7.2,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme D430A, at pH 8.0 and 37°C",756018
+2.2.1.7,7.4,pyruvate,Deinococcus radiodurans,Q9RUB5,"wild type enzyme, at pH 8.0 and 37°C",757477
+2.2.1.7,7.4,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, wild type enzyme, at pH 8.0 and 37°C",756018
+2.2.1.7,9.5,pyruvate,Plasmodium vivax,A5K817,pH and temperature not specified in the publication,719510
+2.2.1.7,9.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"mutant enzyme H434A, at pH 8.0 and 37°C",757477
+2.2.1.7,9.9,pyruvate,Deinococcus radiodurans,Q9RUB5,"apparent value, mutant enzyme H434K, at pH 8.0 and 37°C",756018
+2.2.1.7,26.8,pyruvate,Agrobacterium tumefaciens,Q5QKF8,"pH 8.0, 37°C",674982
+2.2.1.7,26.8,pyruvate,Agrobacterium tumefaciens,Q5QKF8,-,674982
+2.5.1.1,0.4,farnesyl diphosphate,Corynebacterium glutamicum,-,at pH 7.5 and 30°C,738211
+2.5.1.1,0.1,geranyl diphosphate,Corynebacterium glutamicum,-,at pH 7.5 and 30°C,738211
+2.5.1.1,0.085,dimethylallyl diphosphate,Mycobacterium tuberculosis,-,"in 50 mM sodium phosphate (pH 7.0), at 37°C",722274
+2.5.1.1,1.1,dimethylallyl diphosphate,Corynebacterium glutamicum,-,at pH 7.5 and 30°C,738211
+2.5.1.1,1.4,dimethylallyl diphosphate,Picea abies,D2IT07,-,706332
+2.5.1.1,0.012,isopentenyl diphosphate,Mycobacterium tuberculosis,-,"in 50 mM sodium phosphate (pH 7.0), at 37°C",722274
+2.5.1.1,1.1,isopentenyl diphosphate,Corynebacterium glutamicum,-,at pH 7.5 and 30°C,738211
+2.5.1.29,3.3,farnesyl diphosphate,Taxus canadensis,-,-,638765
+2.5.1.29,0.00013,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant N101A/Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.0002,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant N101A/N104A, pH 7.5, 25°C",737677
+2.5.1.29,0.017,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant N104A/Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.02,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant M111E, pH 7.5, 25°C",737677
+2.5.1.29,0.036,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant M111F, pH 7.5, 25°C",737677
+2.5.1.29,0.037,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"wild-type enzyme, pH 7.5, 25°C",737677
+2.5.1.29,0.038,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant R140A, pH 7.5, 25°C",737677
+2.5.1.29,0.04,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant M111A, pH 7.5, 25°C",737677
+2.5.1.29,0.042,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant H139A, pH 7.5, 25°C",737677
+2.5.1.29,0.06,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.065,"(2E,6E)-farnesyl diphosphate",Lutzomyia longipalpis,A0A7G3AJG6,"pH 7.2, 30°C, cosubstrate: isopentenyl diphosphate",777611
+2.5.1.29,0.067,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant N101A, pH 7.5, 25°C",737677
+2.5.1.29,0.1,"(2E,6E)-farnesyl diphosphate",Corynebacterium glutamicum,-,"pH 7.5, 30°C, recombinant His-tagged enzyme",738211
+2.5.1.29,0.11,"(2E,6E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant N104A, pH 7.5, 25°C",737677
+2.5.1.29,0.4,"(2E,6E)-farnesyl diphosphate",Corynebacterium glutamicum,-,"pH 7.5, 30°C, recombinant His-tagged enzyme",738211
+2.5.1.29,0.8,"(2E,6E)-farnesyl diphosphate",Plasmodium vivax,-,"pH 7.7, 37°C, recombinant PvGGPPS",722721
+2.5.1.29,0.000042,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant DELTA1-9, pH 7.5, 25°C",704189
+2.5.1.29,0.000066,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant DELTA1-8, pH 7.5, 25°C",704189
+2.5.1.29,0.000072,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant L8G/I9G, pH 7.5, 25°C",704189
+2.5.1.29,0.00015,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant E7G/L8G, pH 7.5, 25°C",704189
+2.5.1.29,0.00062,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant I9G, pH 7.5, 25°C",704189
+2.5.1.29,0.0051,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant L8G, pH 7.5, 25°C",704189
+2.5.1.29,0.0073,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant DELTA1-7, pH 7.5, 25°C",704189
+2.5.1.29,0.018,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant DELTA1-6, pH 7.5, 25°C",704189
+2.5.1.29,0.021,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"mutant E7G, pH 7.5, 25°C",704189
+2.5.1.29,0.025,"(E,E)-farnesyl diphosphate",Saccharomyces cerevisiae,Q12051,"wild-type, pH 7.5, 25°C",704189
+2.5.1.29,0.5,dimethylallyl diphosphate,Plasmodium vivax,-,"pH 7.7, 37°C, recombinant PvGGPPS",722721
+2.5.1.29,1,dimethylallyl diphosphate,Taxus canadensis,-,-,638765
+2.5.1.29,1.4,dimethylallyl diphosphate,Picea abies,D2IT07,-,706332
+2.5.1.29,0.5,geranyl diphosphate,Plasmodium vivax,-,"pH 7.7, 37°C, recombinant PvGGPPS",722721
+2.5.1.29,2.1,geranyl diphosphate,Taxus canadensis,-,-,638765
+2.5.1.29,0.00013,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant N101A/Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.0002,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant N101A/N104A, pH 7.5, 25°C",737677
+2.5.1.29,0.017,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant N104A/Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.02,isopentenyl diphosphate,Corynebacterium glutamicum,-,"pH 7.5, 30°C, recombinant His-tagged enzyme",738211
+2.5.1.29,0.02,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant M111E, pH 7.5, 25°C",737677
+2.5.1.29,0.02,isopentenyl diphosphate,Lutzomyia longipalpis,A0A7G3AJG6,"pH 7.2, 30°C, cosubstrate: (2E,6E)-farnesyl diphosphate",777611
+2.5.1.29,0.036,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant M111F, pH 7.5, 25°C",737677
+2.5.1.29,0.037,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"wild-type enzyme, pH 7.5, 25°C",737677
+2.5.1.29,0.038,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant R140A, pH 7.5, 25°C",737677
+2.5.1.29,0.04,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant M111A, pH 7.5, 25°C",737677
+2.5.1.29,0.042,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant H139A, pH 7.5, 25°C",737677
+2.5.1.29,0.06,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant Y105A, pH 7.5, 25°C",737677
+2.5.1.29,0.067,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant N101A, pH 7.5, 25°C",737677
+2.5.1.29,0.11,isopentenyl diphosphate,Saccharomyces cerevisiae,Q12051,"mutant N104A, pH 7.5, 25°C",737677
+2.5.1.29,0.8,isopentenyl diphosphate,Plasmodium vivax,-,"pH 7.7, 37°C, recombinant PvGGPPS",722721
+2.5.1.29,1.1,isopentenyl diphosphate,Corynebacterium glutamicum,-,"pH 7.5, 30°C, recombinant His-tagged enzyme",738211
+2.5.1.29,0.204,"trans,trans-farnesyl diphosphate",Homo sapiens,-,"pH 7.7, 37°C, recombinant enzyme",674614
+2.5.1.29,1.6,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant F108A/H139A",674562
+2.5.1.29,2.5,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant wild-type enzyme",674562
+2.5.1.29,2.5,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant Y107A/F108A/H139A",674562
+2.5.1.29,3.9,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant Y107A/H139A",674562
+2.5.1.29,4.2,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant H139A",674562
+2.5.1.29,4.7,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant F108A",674562
+2.5.1.29,4.9,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant Y107A/F108A",674562
+2.5.1.29,5.6,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant Y107A",674562
+2.5.1.29,6.4,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant L135A/H139A",674562
+2.5.1.29,8.4,"trans,trans-farnesyl diphosphate",Saccharomyces cerevisiae,-,"pH 7.5, 25°C, recombinant mutant Y107A/F108A/L135A/H139A",674562
+5.3.3.2,0.000197,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C, mutant enzyme Q160N",728667
+5.3.3.2,0.00022,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C, mutant enzyme Q160L",728667
+5.3.3.2,0.001,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C, mutant enzyme Q160H",728667
+5.3.3.2,0.003,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C, mutant enzyme Q160E",728667
+5.3.3.2,0.03,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C, wild-type enzyme",728667
+5.3.3.2,0.065,isopentenyl diphosphate,Staphylococcus aureus,-,"aerobic, presence of NADPH, pH 7.0, 37°C",678309
+5.3.3.2,0.141,isopentenyl diphosphate,Streptococcus pneumoniae,B2ILS5,at pH 7.0 and 37°C,747530
+5.3.3.2,0.2,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"pH 6.0, 60°C",651170
+5.3.3.2,0.57,isopentenyl diphosphate,Staphylococcus aureus,-,"aerobic, presence of dithionite, pH 7.0, 37°C",678309
+5.3.3.2,0.69,isopentenyl diphosphate,Staphylococcus aureus,-,"anaerobic, presence of NADPH, pH 7.0, 37°C",678309
+5.3.3.2,0.875,isopentenyl diphosphate,Streptococcus pneumoniae,-,"wild type enzyme, at anaerobic conditions, at pH 7.0 and 37°C",747106
+5.3.3.2,0.983,isopentenyl diphosphate,Streptococcus pneumoniae,-,"wild type enzyme, at aerobic conditions, at pH 7.0 and 37°C",747106
+5.3.3.2,1.31,isopentenyl diphosphate,Streptococcus pneumoniae,-,"mutant enzyme N37A, at aerobic conditions, at pH 7.0 and 37°C",747106
+5.3.3.2,1.6,isopentenyl diphosphate,Methanothermobacter thermautotrophicus,-,-,651733
+5.3.3.2,8.27,isopentenyl diphosphate,Saccharomyces cerevisiae,P15496,"wild type enzyme, at pH 7.5 and 30°C",748596
+5.3.3.2,10.57,isopentenyl diphosphate,Saccharomyces cerevisiae,P15496,"mutant enzyme L141H/Y195F/W256C, at pH 7.5 and 30°C",748596
+5.3.3.2,17.9,isopentenyl diphosphate,Thermus thermophilus,-,"pH 7.0, 37°C",678278
+5.3.3.2,191,isopentenyl diphosphate,Methanocaldococcus jannaschii,-,"pH 7.0, 85°C",678586
+5.3.3.2,197,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"mutant enzyme Q160N, in 50 mM MOPS-NaOH, pH 6.0, at 60°C",728667
+5.3.3.2,221,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"mutant enzyme Q160L, in 50 mM MOPS-NaOH, pH 6.0, at 60°C",728667
+5.3.3.2,1210,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"mutant enzyme Q160H, in 50 mM MOPS-NaOH, pH 6.0, at 60°C",728667
+5.3.3.2,3280,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"mutant enzyme Q160E, in 50 mM MOPS-NaOH, pH 6.0, at 60°C",728667
+5.3.3.2,29900,isopentenyl diphosphate,Saccharolobus shibatae,P61615,"wild type enzyme, in 50 mM MOPS-NaOH, pH 6.0, at 60°C",728667
+2.3.3.10,0.0017,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme R157A",657850
+2.3.3.10,0.0029,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme H188N",657850
+2.3.3.10,0.0041,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme C212S",657850
+2.3.3.10,0.0076,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme S89A",657850
+2.3.3.10,0.0161,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme S356A",657850
+2.3.3.10,0.0234,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme N115A",657850
+2.3.3.10,0.0417,acetyl-CoA,Bos taurus,-,-,488103
+2.3.3.10,0.0667,acetyl-CoA,Gallus gallus,-,-,488119
+2.3.3.10,0.214,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, mutant enzyme S359A",657850
+2.3.3.10,0.415,acetyl-CoA,Brassica juncea,-,"pH 7.5, 30°C, His6-BjHMGS1 wild-type enzyme",657850
+2.3.3.10,4.6,acetyl-CoA,Haloferax volcanii,D4GWR6,"pH 8.0, 30°C",727772
+2.7.1.36,3.1,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C107S/C281S, pH 7.5, 34°C",691055
+2.7.1.36,4.3,(R)-mevalonate,Methanosarcina mazei,-,"in 50 mM Tris, 50 mM NaCl (pH 7.6), at 30°C",721347
+2.7.1.36,5.2,(R)-mevalonate,Rattus norvegicus,-,"mutant A141C, pH 7.5, 34°C",691055
+2.7.1.36,8.6,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C107A/C281A, pH 7.5, 34°C",691055
+2.7.1.36,10.5,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C107S, pH 7.5, 34°C",691055
+2.7.1.36,12.7,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C281S, pH 7.5, 34°C",691055
+2.7.1.36,17.1,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C107A, pH 7.5, 34°C",691055
+2.7.1.36,21.9,(R)-mevalonate,Rattus norvegicus,-,"wild-type, pH 7.5, 34°C",691055
+2.7.1.36,23.3,(R)-mevalonate,Methanocaldococcus jannaschii,-,"mutant C281A, pH 7.5, 34°C",691055
+2.7.1.36,28.5,(R)-mevalonate,Methanocaldococcus jannaschii,-,"wild-type, pH 7.5, 34°C",691055
+2.7.1.36,143.8,(R)-mevalonate,Bacopa monnieri,M1F2U2,at pH 7.0 and 30°C,738399
+2.7.1.36,10.1,ATP,Aedes aegypti,-,"at pH 7.5, temperature not specified in the publication",739434
+2.7.1.36,150.9,ATP,Bacopa monnieri,M1F2U2,at pH 7.0 and 30°C,738399
+4.2.3.15,0.52,geranyl diphosphate,Artemisia annua,A0A068L9J0,"pH 7.0, 30°C, recombinant enzyme",747873
+4.2.3.17,0.00004,geranylgeranyl diphosphate,Taxus brevifolia,-,M1 preprotein,492237
+4.2.3.17,0.0000417,geranylgeranyl diphosphate,Taxus brevifolia,-,thioredoxin fusion,492237
+4.2.3.17,0.000133,geranylgeranyl diphosphate,Taxus brevifolia,-,M93,492237
+4.2.3.17,0.00017,geranylgeranyl diphosphate,Taxus brevifolia,-,M79,492237
+4.2.3.17,0.000177,geranylgeranyl diphosphate,Taxus brevifolia,-,native enzyme,492237
+4.2.3.17,0.0106,geranylgeranyl diphosphate,Taxus brevifolia,-,pH and temperature not specified in the publication,747344
+4.2.3.17,0.16,geranylgeranyl diphosphate,Taxus brevifolia,-,"full-length enzyme, at pH 8.0 and 30°C",747121
+4.2.3.24,0.00078,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Co2+, pH 7.5, 30°C",663768
+4.2.3.24,0.0013,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Co2+, pH 6.5, 30°C",663768
+4.2.3.24,0.0013,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9AR04,"mutant enzyme T296I, at pH 7.2 and 30°C",747114
+4.2.3.24,0.0015,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9AR04,"mutant enzyme T296V, at pH 7.2 and 30°C",747114
+4.2.3.24,0.0043,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Mg2+, pH 7.5, 30°C",663768
+4.2.3.24,0.0059,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9AR04,"mutant enzyme T296A, at pH 7.2 and 30°C",747114
+4.2.3.24,0.0068,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Mg2+, pH 6.5, 30°C",663768
+4.2.3.24,0.0075,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9AR04,"mutant enzyme T296S, at pH 7.2 and 30°C",747114
+4.2.3.24,0.0108,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Mn2+, pH 7.5, 30°C",663768
+4.2.3.24,0.015,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Mn2+, pH 6.5, 30°C",663768
+4.2.3.24,0.0154,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"presence of Mg2+, pH 9.5, 30°C",663768
+4.2.3.24,0.0162,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"mutant enzyme T296V, at pH 7.0 and 30°C",747031
+4.2.3.24,0.0163,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9AR04,"wild type enzyme, at pH 7.2 and 30°C",747114
+4.2.3.24,0.186,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"wild type enzyme, at pH 7.0 and 30°C",747031
+4.2.3.24,0.321,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"mutant enzyme T399S, at pH 7.0 and 30°C",747031
+4.2.3.24,0.334,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"mutant enzyme T447S, at pH 7.0 and 30°C",747031
+4.2.3.24,0.518,"(2E,6E)-farnesyl diphosphate",Artemisia annua,-,"mutant enzyme T399S/T447S, at pH 7.0 and 30°C",747031
+4.2.3.24,0.00034,geranyl diphosphate,Artemisia annua,-,"presence of Mn2+, pH 7.5, 30°C",663768
+4.2.3.24,0.0007,geranyl diphosphate,Artemisia annua,-,"presence of Mn2+, pH 6.5, 30°C",663768
+4.2.3.38,0.002,"(2E,6E)-farnesyl diphosphate",Abies grandis,O81086,"in 25 mM Tris, 15 mM MgCl2, pH 7.5, at 30°C",730976
+4.2.3.38,0.0067,"(2E,6E)-farnesyl diphosphate",Santalum album,A0A0A0RDZ8,"at 30°C, pH not specified in the publication",749302
+4.2.3.38,0.01,"(2E,6E)-farnesyl diphosphate",Ginkgo biloba,A0A097SRT3,"pH 7.5, 22°C, recombinant His-tagged enzyme",748961
+4.2.3.38,0.01,"(2E,6E)-farnesyl diphosphate",Ginkgo biloba,A0A097SRT3,at pH 7.5 and 25°C,748961
+4.2.3.47,0.02,"(2Z,6E)-2-fluorofarnesyl diphosphate",Mentha x piperita,-,"pH not specified in the publication, temperature not specified in the publication",729886
+4.2.3.47,0.023,(3RS)-trans-nerolidyl diphosphate,Mentha x piperita,-,"pH not specified in the publication, temperature not specified in the publication",729886
+4.2.3.47,0.0095,"(2E,6E)-farnesyl diphosphate",Artemisia annua,Q9FXY7,-,700661
+4.2.3.47,0.019,"(2E,6E)-farnesyl diphosphate",Streptomyces coelicolor,-,"pH 5.5, in the presence of Mg2+",698959
+4.2.3.47,0.028,"(2E,6E)-farnesyl diphosphate",Mentha x piperita,-,"pH not specified in the publication, temperature not specified in the publication",729886
+4.2.3.75,0.012,"(2E,6E)-farnesyl diphosphate",Coprinopsis cinerea,-,"pH 8.0, 30°C",714733
+4.2.3.75,0.03,"(2E,6E)-farnesyl diphosphate",Solidago canadensis,Q70EZ6,"25°C, pH not specified in the publication",660802
+4.2.3.75,0.185,"(2E,6E)-farnesyl diphosphate",Piper nigrum,A0A2R4QKX7,"pH 7, 30Â°C",746924
+4.2.3.77,0.017,"(2E,6E)-farnesyl diphosphate",Actinidia deliciosa,Q32W37,"pH 7.5, 30°C, presence of Mg2+",699267
+4.2.3.77,0.02,"(2E,6E)-farnesyl diphosphate",Solidago canadensis,Q70EZ7,"25°C, pH not specified in the publication",660802
+4.2.3.77,0.04,"(2E,6E)-farnesyl diphosphate",Solidago canadensis,Q70EZ6,"pH 7.8, 12°C",729283
+4.2.3.97,0.00114,"(2E,6E)-farnesyl diphosphate",Streptomyces clavuligerus,B5GS26,"30°C, pH not specified in the publication, presence of Mg2+",714713
+4.2.3.97,0.00114,"(2E,6E)-farnesyl diphosphate",Streptomyces clavuligerus,B5GS26,"30°C, pH not specified in the publication",714713

@@ -15,6 +15,10 @@ CarotKcat_raw_data.zip
 # third-party genome-scale model (fetched from BiGG by scripts/19)
 data/ecgem/iML1515.xml
 
+# third-party BRENDA HTML pages (crawled by scripts/21, ~15 MB); the extracted
+# records are committed as results/brenda_terpenoid_raw.csv instead
+data/brenda/
+
 # --- Confidential: unpublished mutant designs (local only, never push) ---
 mutants.fasta
 generate_mutants.py
