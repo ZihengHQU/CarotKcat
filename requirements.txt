@@ -1,6 +1,6 @@
 torch>=2.4
 fair-esm>=2.0
-pandas
+pandas>=2.2,<3
 numpy
 scikit-learn
 scipy
@@ -10,3 +10,4 @@ rdkit
 gradio
 xgboost
 matplotlib
+cobra>=0.29

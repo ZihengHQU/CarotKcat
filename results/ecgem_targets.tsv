@@ -1,0 +1,4 @@
+case	mg_per_gDCW	hours	flux_umol_gDCW_h	source	flux_note
+Xu 2018 (Bioprocess Biosyst Eng 41:489) content/40 h	67.0	40.0	3.1199359248980203	Xu et al. 2018, 67 mg/gDCW at 40 h	peak-value case (upper bound)
+POSTECH JYJ0 base strain (crtEBI only)	0.38	24.0	0.029491931628389242	Kim thesis 2016, 0.38 mg/gDCW	unevolved pathway
+POSTECH JYJ3 (dxs/idi/ispA amplified)	4.0	24.0	0.310441385561992	Kim thesis 2016, 4.0 mg/gDCW	debottlenecked pathway

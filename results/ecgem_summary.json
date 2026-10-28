@@ -1,0 +1,63 @@
+{
+  "kcat_predictions": [
+    {
+      "enzyme": "CrtE",
+      "substrate": "FPP",
+      "kcat_s-1": 0.14582145057495358,
+      "disagreement_log10": 0.9128266870975494
+    },
+    {
+      "enzyme": "CrtB",
+      "substrate": "GGPP",
+      "kcat_s-1": 1.611949746561582,
+      "disagreement_log10": 0.5416599065065384
+    },
+    {
+      "enzyme": "CrtI",
+      "substrate": "phytoene",
+      "kcat_s-1": 0.7515360578247571,
+      "disagreement_log10": 0.6556027382612228
+    }
+  ],
+  "published_targets_umol_gDCW_h": [
+    {
+      "case": "Xu 2018 (Bioprocess Biosyst Eng 41:489) content/40 h",
+      "flux_umol_gDCW_h": 3.1199359248980203
+    },
+    {
+      "case": "POSTECH JYJ0 base strain (crtEBI only)",
+      "flux_umol_gDCW_h": 0.029491931628389242
+    },
+    {
+      "case": "POSTECH JYJ3 (dxs/idi/ispA amplified)",
+      "flux_umol_gDCW_h": 0.310441385561992
+    }
+  ],
+  "assumptions": {
+    "protein_fraction_g_per_gDCW": 0.5,
+    "dalton_per_residue": 110.0,
+    "lycopene_MW": 536.87,
+    "glucose_uptake_mmol_gDCW_h": 10.0
+  },
+  "mu_max_per_h": 0.8217979336265914,
+  "stoich_max_lycopene_umol_gDCW_h": 929.1119691119725,
+  "measured_flux_range_umol_gDCW_h": [
+    0.029491931628389242,
+    3.1199359248980203
+  ],
+  "headroom_at_1pct_protein": {
+    "CrtE": 25.32495114547352,
+    "CrtB": 273.60697462128536,
+    "CrtI": 80.11592746421762
+  },
+  "required_frac_at_max_target": {
+    "CrtE": 0.00039486749421774743,
+    "CrtB": 3.65487758995967e-05,
+    "CrtI": 0.00012481912544127165
+  },
+  "native_isoprenoid_flux_at_mumax": {
+    "DXPS": 0.0023297971417724768,
+    "OCTDPS": 0.00018326093919137092,
+    "UDCPDPS": 4.519888634945953e-05
+  }
+}

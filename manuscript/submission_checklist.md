@@ -34,6 +34,7 @@ Status legend: [x] done, [ ] to do by the author, [!] cannot be completed by the
 - [x] Temporal holdout (KcatTIE) and cross-family variant set (ADK)
 - [x] Mutation sensitivity analysis
 - [x] 5-fold repeated splits, random and group, reported as mean ± SD (`results/repeated_splits_summary.csv`; scripts/18, 62 min)
+- [x] Dry validation: predicted kcat embedded in enzyme-constrained iML1515, compared with published lycopene productivities (scripts/19–20; Fig. 6)
 - [!] No wet-lab validation (by design; stated in the manuscript)
 
 ## Journal-specific
